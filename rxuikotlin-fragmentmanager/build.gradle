@@ -48,4 +48,16 @@ ext {
     artifactId = 'rxuikotlin-fragmentmanager'
 }
 
-apply from: '../deploy.gradle'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.akouzmohamed999.rxuikotlin'
+                artifactId = 'rxuikotlin-fragmentmanager'
+                version = '1.0.0'
+            }
+        }
+    }
+}

@@ -49,4 +49,16 @@ ext {
     artifactId = 'rxuikotlin-core'
 }
 
-apply from: '../deploy.gradle'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.akouzmohamed999.rxuikotlin'
+                artifactId = 'rxuikotlin-core'
+                version = '1.0.0'
+            }
+        }
+    }
+}

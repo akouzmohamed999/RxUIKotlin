@@ -34,7 +34,7 @@ task clean(type: Delete) {
 }
 
 ext {
-    versionCode = "$System.env.BITRISE_BUILD_NUMBER"
-    groupId = 'com.vincentmasselis.rxuikotlin'
+    versionCode = "1.0.0"
+    groupId = 'com.github.akouzmohamed999.rxuikotlin'
     libVersion = "3.0.0"
 }
